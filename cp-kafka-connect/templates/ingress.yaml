@@ -1,5 +1,5 @@
 {{- if .Values.ingress }}
-{{- $fullName := include "cp-kafka-connect.fullname . -}}
+{{- $fullName := include "cp-kafka-connect.fullname" . -}}
 {{- $svcPort := .Values.servicePort -}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
