@@ -136,3 +136,18 @@ livenessProbe:
   # initialDelaySeconds: 30
   # periodSeconds: 5
   # failureThreshold: 10
+ingress:
+  enable: true
+  annotations: {}
+  classname: nginx-ingress
+  tls:
+  - secretName: meey-dev-tls-wildcard
+    hosts:
+      - kafka-connect-meeydwh.meey.dev
+  hosts:
+  - host: kafka-connect-meeydwh.meey.dev
+    paths:
+      - path: /
+
+
+
