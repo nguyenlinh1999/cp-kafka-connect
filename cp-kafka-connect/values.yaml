@@ -141,11 +141,11 @@ ingress:
   annotations: {}
   classname: nginx-ingress
   tls:
-  - secretName: meey-dev-tls-wildcard
+  - secretName: secret-example
     hosts:
-      - kafka-connect-meeydwh.meey.dev
+      - example.com
   hosts:
-  - host: kafka-connect-meeydwh.meey.dev
+  - host: example.com
     paths:
       - path: /
 
